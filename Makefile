@@ -1,3 +1,8 @@
+first-install:
+	pip3 install poetry
+	poetry config  virtualenvs.create true
+	poetry config  virtualenvs.in-project true
+
 install:
 	poetry install
 
