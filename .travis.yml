@@ -1,0 +1,8 @@
+language: python
+python:
+  - "3.9"
+install:
+  - make first-install
+  - make install
+# command to run tests
+script: make lint
