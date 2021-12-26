@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 """Main programm."""
 
-import random
 
-import prompt
+from .brain_games import ask_name, ask_question, get_random
 
 
 def main():
@@ -13,10 +12,7 @@ def main():
     name: string
 
     """
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name?')
-    print(f'Hello, {name}')
-    print('Answer "yes" if the number is even, otherwise answer "no".')
+    name = ask_name()
     game(name)
 
 
@@ -29,10 +25,9 @@ def game(name):
     """
     trying = 0
     while trying < 3:
-        rannum = random.randint(1, 100)
-        print(f'Question: {rannum}')
-        answer = prompt.string('Your answer:')
-        check, true_answer = check_answer(rannum, answer)
+        true_answer, qustion = get_even()
+        answer = ask_question(qustion)
+        check = check_answer(true_answer, answer)
 
         if check == 0:
             print(f'"{answer}" is wrong answer ;(. Correct answer was "{true_answer}".')
@@ -46,22 +41,38 @@ def game(name):
     print(f'Congratulations, {name}!')
 
 
-def check_answer(num, answer):
+def check_answer(true_answer, answer):
     """Cheking users unswers.
+
+    Args:
+        true_answer: true answer
+        answer: answer of user
+
+    Returns:
+        check: one or ziro
+
+    """
+    check = 1 if true_answer == answer else 0
+
+    return check
+
+
+def get_even():
+    """Get const of game.
 
     Args:
         num: rundom num
         answer: answer of user
 
     Returns:
-        check: one or ziro
-        true_answer: true answer
+        true_answer: int true answer
+        num: int with rundom num
 
     """
+    num = get_random()
     true_answer = 'yes' if num % 2 == 0 else 'no'
-    check = 1 if true_answer == answer else 0
 
-    return check, true_answer
+    return true_answer, num
 
 
 if __name__ == '__main__':

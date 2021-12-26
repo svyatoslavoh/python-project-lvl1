@@ -2,11 +2,11 @@
 """Programm for calc."""
 
 
-import prompt
-
 import operator
-
 import random
+
+
+from .brain_games import ask_name, ask_question, get_random
 
 
 def main():
@@ -16,15 +16,13 @@ def main():
     name: string
 
     """
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}')
+    name = ask_name()
     print('What is the result of the expression?')
     game(name)
 
 
 def get_calc():
-    """Game func calc.
+    """Get const of game.
 
     Returns:
         true_answer: int true answer
@@ -37,8 +35,8 @@ def get_calc():
         '*': operator.mul,
         '/': operator.truediv
     }
-    num1 = random.randint(0, 10)
-    num2 = random.randint(1, 10)
+    num1 = get_random()
+    num2 = get_random()
     op = random.choice(
         list(ops.keys())
     )
@@ -59,8 +57,7 @@ def game(name):
     trying = 0
     while trying < 3:
         true_answer, qustion = get_calc()
-        print(f'Question: {qustion}')
-        answer = prompt.string('Your answer:')
+        answer = ask_question(qustion)
         check = check_answer(true_answer, answer)
 
         if check == 0:
@@ -83,7 +80,9 @@ def check_answer(true_answer, answer):
         answer: answer of user
 
     """
-    return 1 if float(true_answer) == float(answer) else 0
+    check = 1 if float(true_answer) == float(answer) else 0
+
+    return check
 
 
 if __name__ == '__main__':
