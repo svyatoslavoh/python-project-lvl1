@@ -1,7 +1,7 @@
 first-install:
 	pip3 install poetry
-	poetry config  virtualenvs.create true
-	poetry config  virtualenvs.in-project true
+	poetry config virtualenvs.create true
+	poetry config virtualenvs.in-project true
 
 install:
 	poetry install
@@ -17,6 +17,9 @@ brain-games:
 
 brain-even:
 	poetry run brain-even 
+
+brain-calc:
+	poetry run brain-calc 
 
 package-install:
 	python3 -m pip install --force-reinstall dist/*.whl
