@@ -47,9 +47,6 @@ def get_calc():
     return true_answer, qustion
 
 
-
-
-
 def check_answer(true_answer, answer):
     """Cheking users unswers.
 
