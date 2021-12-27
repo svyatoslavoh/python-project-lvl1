@@ -45,7 +45,7 @@ def get_random():
     Returns:
         random: random num
     """
-    return random.randint(1, 100)
+    return random.randint(1, 10)
 
 
 def game(name, get_calc, check_answer):

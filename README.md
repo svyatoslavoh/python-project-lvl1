@@ -7,3 +7,6 @@
 
 * make brain-calc
 [![asciicast](https://asciinema.org/a/w1e81Hx6JjzexPgQYgIugJlzc.svg)](https://asciinema.org/a/w1e81Hx6JjzexPgQYgIugJlzc)
+
+* make brain-gcd
+[![asciicast](https://asciinema.org/a/0Y3d3d25qGJs2GLU4Tv9hsDON.svg)](https://asciinema.org/a/0Y3d3d25qGJs2GLU4Tv9hsDON)
