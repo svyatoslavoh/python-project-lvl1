@@ -48,5 +48,30 @@ def get_random():
     return random.randint(1, 100)
 
 
+def game(name, get_calc, check_answer):
+    """Game func.
+
+    Args:
+        name: name of the user
+
+    """
+    trying = 0
+    while trying < 3:
+        true_answer, qustion = get_calc()
+        answer = ask_question(qustion)
+        check = check_answer(true_answer, answer)
+
+        if check == 0:
+            print(f'"{answer}" is wrong answer ;(. Correct answer was "{true_answer}".')
+            print(f'Let as try again, {name}!')
+
+            return
+
+        print('Correct!')
+        trying += 1
+
+    print(f'Congratulations, {name}!')
+
+
 if __name__ == '__main__':
     main()

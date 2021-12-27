@@ -2,7 +2,7 @@
 """Main programm."""
 
 
-from .brain_games import ask_name, ask_question, get_random
+from .brain_games import ask_name, get_random, game
 
 
 def main():
@@ -13,32 +13,7 @@ def main():
 
     """
     name = ask_name()
-    game(name)
-
-
-def game(name):
-    """Game func.
-
-    Args:
-        name: name of the user
-
-    """
-    trying = 0
-    while trying < 3:
-        true_answer, qustion = get_even()
-        answer = ask_question(qustion)
-        check = check_answer(true_answer, answer)
-
-        if check == 0:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{true_answer}".')
-            print(f'Let as try again, {name}!')
-
-            return
-
-        print('Correct!')
-        trying += 1
-
-    print(f'Congratulations, {name}!')
+    game(name, get_even, check_answer)
 
 
 def check_answer(true_answer, answer):
