@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 """Programm for calc."""
 
-import math
-
 from .brain_games import ask_name, get_random, game, get_random_item
 
 
@@ -26,9 +24,9 @@ def get_progression():
         qustion: string whith rundom num
 
     """
-    step =  get_random(2, 9)
-    start =  get_random(1, 20)
-    list_progressiv = list(range(start, 100,step)[:10])
+    step = get_random(2, 9)
+    start = get_random(1, 20)
+    list_progressiv = list(range(start, 100, step)[:10])
 
     op = get_random_item(enumerate(list_progressiv))
     list_progressiv[op[0]] = '..'

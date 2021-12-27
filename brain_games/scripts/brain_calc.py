@@ -3,8 +3,6 @@
 
 
 import operator
-import random
-
 
 from .brain_games import ask_name, get_random, game, get_random_item
 
@@ -38,7 +36,6 @@ def get_calc():
     num1 = get_random(1, 10)
     num2 = get_random(1, 10)
     op = get_random_item(ops.keys())
-    
 
     true_answer = ops.get(op)(num1, num2)
     qustion = f'{num1} {op} {num2}'
