@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 """Programm for calc."""
 
-
-import operator
-import random
-
+import math
 
 from .brain_games import ask_name, get_random, game, get_random_item
 
@@ -17,11 +14,11 @@ def main():
 
     """
     name = ask_name()
-    print('What is the result of the expression?')
-    game(name, get_calc, check_answer)
+    print('Find the greatest common divisor of given numbers.')
+    game(name, get_progression, check_answer)
 
 
-def get_calc():
+def get_progression():
     """Get const of game.
 
     Returns:
@@ -29,19 +26,14 @@ def get_calc():
         qustion: string whith rundom num
 
     """
-    ops = {
-        '+': operator.add,
-        '-': operator.sub,
-        '*': operator.mul,
-        '/': operator.truediv
-    }
-    num1 = get_random(1, 10)
-    num2 = get_random(1, 10)
-    op = get_random_item(ops.keys())
-    
+    step =  get_random(2, 9)
+    start =  get_random(1, 20)
+    list_progressiv = list(range(start, 100,step)[:10])
 
-    true_answer = ops.get(op)(num1, num2)
-    qustion = f'{num1} {op} {num2}'
+    op = get_random_item(enumerate(list_progressiv))
+    list_progressiv[op[0]] = '..'
+    qustion = " ".join(map(str, list_progressiv))
+    true_answer = op[1]
 
     return true_answer, qustion
 

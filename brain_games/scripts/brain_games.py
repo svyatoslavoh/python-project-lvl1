@@ -39,13 +39,22 @@ def ask_question(qustion):
     return answer
 
 
-def get_random():
-    """Ask for the name.
+def get_random(start, stop):
+    """Get random num.
 
     Returns:
         random: random num
     """
-    return random.randint(1, 10)
+    return random.randint(start, stop)
+
+
+def get_random_item(item):
+    """Ask for the name.
+
+    Returns:
+        random: random item
+    """
+    return random.choice(list(item))
 
 
 def game(name, get_calc, check_answer):

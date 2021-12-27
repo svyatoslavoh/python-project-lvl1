@@ -10,3 +10,6 @@
 
 * make brain-gcd
 [![asciicast](https://asciinema.org/a/0Y3d3d25qGJs2GLU4Tv9hsDON.svg)](https://asciinema.org/a/0Y3d3d25qGJs2GLU4Tv9hsDON)
+
+*make-progression
+[![asciicast](https://asciinema.org/a/zEAvM4H04Wdq4LWeYmwQH6hDG.svg)](https://asciinema.org/a/zEAvM4H04Wdq4LWeYmwQH6hDG)

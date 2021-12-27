@@ -27,8 +27,8 @@ def get_calc():
         qustion: string whith rundom num
 
     """
-    num1 = get_random()
-    num2 = get_random()
+    num1 = get_random(1, 10)
+    num2 = get_random(1, 10)
 
     true_answer = math.gcd(num1, num2)
     qustion = f'{num1} {num2}'

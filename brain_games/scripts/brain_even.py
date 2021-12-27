@@ -44,7 +44,7 @@ def get_even():
         num: int with rundom num
 
     """
-    num = get_random()
+    num = get_random(1, 10)
     true_answer = 'yes' if num % 2 == 0 else 'no'
 
     return true_answer, num
