@@ -28,11 +28,13 @@ def get_prime():
     num = get_random(1, 30)
 
     k = 0
-    for i in range(2, num // 2 + 1):
-        if (num % i == 0):
-            k = k + 1
-
-    true_answer = 'yes' if k <= 0 else 'no'
+    if num > 1:
+        for i in range(2, num // 2 + 1):
+            if (num % i == 0):
+                k = k + 1
+        true_answer = 'yes' if k <= 0 else 'no'
+    else:
+        true_answer = 'no'
 
     return true_answer, num
 
