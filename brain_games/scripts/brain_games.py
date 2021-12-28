@@ -3,6 +3,7 @@
 
 from .games import ask_name
 
+
 def main():
     """Make a hi intreface."""
     ask_name()
