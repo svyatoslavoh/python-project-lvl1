@@ -30,10 +30,10 @@ def get_calc():
     num1 = get_random(1, 10)
     num2 = get_random(1, 10)
 
-    true_answer = math.gcd(num1, num2)
+    true_answer = str(math.gcd(num1, num2))
     qustion = f'{num1} {num2}'
 
-    return str(true_answer), qustion
+    return true_answer, qustion
 
 
 if __name__ == '__main__':

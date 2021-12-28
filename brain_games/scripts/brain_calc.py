@@ -36,10 +36,10 @@ def get_calc():
     num2 = get_random(1, 10)
     op = get_random_item(ops.keys())
 
-    true_answer = ops.get(op)(num1, num2)
+    true_answer = str(ops.get(op)(num1, num2))
     qustion = f'{num1} {op} {num2}'
 
-    return str(true_answer), qustion
+    return true_answer, qustion
 
 
 if __name__ == '__main__':

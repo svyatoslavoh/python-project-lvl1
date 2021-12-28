@@ -13,7 +13,7 @@ def main():
     """
     name = ask_name()
     print('Find the greatest common divisor of given numbers.')
-    game(name, get_progression, check_answer)
+    game(name, get_progression)
 
 
 def get_progression():
@@ -31,7 +31,7 @@ def get_progression():
     op = get_random_item(enumerate(list_progressiv))
     list_progressiv[op[0]] = '..'
     qustion = " ".join(map(str, list_progressiv))
-    true_answer = op[1]
+    true_answer = str(op[1])
 
     return true_answer, qustion
 
