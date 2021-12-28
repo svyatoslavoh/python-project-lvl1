@@ -2,8 +2,6 @@
 """Programm for calc."""
 
 
-import sympy
-
 from .games import ask_name, get_random, game
 
 
@@ -29,11 +27,14 @@ def get_prime():
     """
     num = get_random(1, 30)
 
-    is_prime = sympy.isprime(num)
-    true_answer = 'yes' if is_prime is True else 'no'
-    qustion = num
+    k = 0
+    for i in range(2, num // 2 + 1):
+        if (num % i == 0):
+            k = k + 1
 
-    return true_answer, qustion
+    true_answer = 'yes' if k <= 0 else 'no'
+
+    return true_answer, num
 
 
 if __name__ == '__main__':

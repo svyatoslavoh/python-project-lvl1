@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hexlet-code"
-version = "0.1.4"
+version = "0.1.5"
 description = "Brain games(learn python)"
 authors = ["svyatoslavoh <alegkonin@gmail.com>"]
 repository = "https://github.com/svyatoslavoh/python-project-lvl1"
@@ -15,7 +15,6 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.9"
 prompt = "^0.4.1"
-sympy = "^1.9"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^4.0.1"
