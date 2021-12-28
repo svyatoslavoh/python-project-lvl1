@@ -28,7 +28,7 @@ def ask_question(qustion):
         answer: answer of user
 
     """
-    print(f'Question: {qustion}')
+    print('Question:', qustion)
     answer = prompt.string('Your answer:')
 
     return answer
