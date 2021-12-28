@@ -74,12 +74,12 @@ def game(name, get_params):
     """
     trying = 0
     while trying < 3:
-        true_answer, qustion = get_params()
-        answer = ask_question(qustion)
-        check = check_answer(true_answer, answer)
+        true, qustion = get_params()
+        answ = ask_question(qustion)
+        check = check_answer(true, answ)
 
         if check == 0:
-            print(f'"{answer}" is wrong answer ;(. Correct answer was "{true_answer}".')
+            print(f'"{answ}" is wrong answer ;(. Correct answer was "{true}".')
             print(f'Let\'s try again, {name}!')
 
             return
