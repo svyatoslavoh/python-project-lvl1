@@ -13,3 +13,6 @@
 
 *make-progression
 [![asciicast](https://asciinema.org/a/zEAvM4H04Wdq4LWeYmwQH6hDG.svg)](https://asciinema.org/a/zEAvM4H04Wdq4LWeYmwQH6hDG)
+
+*make-prime
+[![asciicast](https://asciinema.org/a/GhGhn82W7TcJksEcWaOPjGKqS.svg)](https://asciinema.org/a/GhGhn82W7TcJksEcWaOPjGKqS)

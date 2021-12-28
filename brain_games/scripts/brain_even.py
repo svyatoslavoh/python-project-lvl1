@@ -13,23 +13,7 @@ def main():
 
     """
     name = ask_name()
-    game(name, get_even, check_answer)
-
-
-def check_answer(true_answer, answer):
-    """Cheking users unswers.
-
-    Args:
-        true_answer: true answer
-        answer: answer of user
-
-    Returns:
-        check: one or ziro
-
-    """
-    check = 1 if true_answer == answer else 0
-
-    return check
+    game(name, get_even)
 
 
 def get_even():

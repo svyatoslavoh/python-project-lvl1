@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """Programm for calc."""
 
-import math
 
+import sympy
 
 from .brain_games import ask_name, get_random, game
 
@@ -15,11 +15,11 @@ def main():
 
     """
     name = ask_name()
-    print('Find the greatest common divisor of given numbers.')
-    game(name, get_calc)
+    print('Answer "yes" if given number is prime. Otherwise answer "no"')
+    game(name, get_prime)
 
 
-def get_calc():
+def get_prime():
     """Get const of game.
 
     Returns:
@@ -27,13 +27,13 @@ def get_calc():
         qustion: string whith rundom num
 
     """
-    num1 = get_random(1, 10)
-    num2 = get_random(1, 10)
+    num = get_random(1, 30)
 
-    true_answer = math.gcd(num1, num2)
-    qustion = f'{num1} {num2}'
+    is_prime = sympy.isprime(num)
+    true_answer = 'yes' if is_prime is True else 'no'
+    qustion = f'{num}'
 
-    return str(true_answer), qustion
+    return true_answer, qustion
 
 
 if __name__ == '__main__':

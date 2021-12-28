@@ -16,7 +16,7 @@ def main():
     """
     name = ask_name()
     print('What is the result of the expression?')
-    game(name, get_calc, check_answer)
+    game(name, get_calc)
 
 
 def get_calc():
@@ -40,20 +40,7 @@ def get_calc():
     true_answer = ops.get(op)(num1, num2)
     qustion = f'{num1} {op} {num2}'
 
-    return true_answer, qustion
-
-
-def check_answer(true_answer, answer):
-    """Cheking users unswers.
-
-    Args:
-        true_answer: true answer
-        answer: answer of user
-
-    """
-    check = 1 if float(true_answer) == float(answer) else 0
-
-    return check
+    return str(true_answer), qustion
 
 
 if __name__ == '__main__':

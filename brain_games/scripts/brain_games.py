@@ -5,11 +5,6 @@ import prompt
 import random
 
 
-def main():
-    """Make a hi intreface."""
-    ask_name()
-
-
 def ask_name():
     """Ask for the name.
 
@@ -40,7 +35,7 @@ def ask_question(qustion):
 
 
 def get_random(start, stop):
-    """Get random num.
+    """Generate random num.
 
     Returns:
         random: random num
@@ -49,7 +44,7 @@ def get_random(start, stop):
 
 
 def get_random_item(item):
-    """Ask for the name.
+    """Get random item.
 
     Returns:
         random: random item
@@ -57,7 +52,20 @@ def get_random_item(item):
     return random.choice(list(item))
 
 
-def game(name, get_calc, check_answer):
+def check_answer(true_answer, answer):
+    """Cheking users unswers.
+
+    Args:
+        true_answer: true answer
+        answer: answer of user
+
+    """
+    check = 1 if true_answer == answer else 0
+
+    return check
+
+
+def game(name, get_params):
     """Game func.
 
     Args:
@@ -66,7 +74,7 @@ def game(name, get_calc, check_answer):
     """
     trying = 0
     while trying < 3:
-        true_answer, qustion = get_calc()
+        true_answer, qustion = get_params()
         answer = ask_question(qustion)
         check = check_answer(true_answer, answer)
 
@@ -80,7 +88,3 @@ def game(name, get_calc, check_answer):
         trying += 1
 
     print(f'Congratulations, {name}!')
-
-
-if __name__ == '__main__':
-    main()
