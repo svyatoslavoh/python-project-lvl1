@@ -2,7 +2,7 @@
 """Main programm."""
 
 
-from .brain_games import ask_name, get_random, game
+from .games import ask_name, get_random, game
 
 
 def main():

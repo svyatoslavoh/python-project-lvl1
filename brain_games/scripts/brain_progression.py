@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Programm for calc."""
 
-from .brain_games import ask_name, get_random, game, get_random_item
+from .games import ask_name, get_random, game, get_random_item
 
 
 def main():

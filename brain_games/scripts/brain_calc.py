@@ -4,7 +4,7 @@
 
 import operator
 
-from .brain_games import ask_name, get_random, game, get_random_item
+from .games import ask_name, get_random, game, get_random_item
 
 
 def main():
@@ -30,8 +30,7 @@ def get_calc():
     ops = {
         '+': operator.add,
         '-': operator.sub,
-        '*': operator.mul,
-        '/': operator.truediv
+        '*': operator.mul
     }
     num1 = get_random(1, 10)
     num2 = get_random(1, 10)
