@@ -29,7 +29,7 @@ def ask_question(qustion):
 
     """
     print('Question:', qustion)
-    answer = prompt.string('Your answer:')
+    answer = prompt.string('Your answer: ')
 
     return answer
 

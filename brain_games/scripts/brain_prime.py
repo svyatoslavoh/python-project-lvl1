@@ -15,7 +15,7 @@ def main():
 
     """
     name = ask_name()
-    print('Answer "yes" if given number is prime. Otherwise answer "no"')
+    print('Answer "yes" if given number is prime. Otherwise answer "no".')
     game(name, get_prime)
 
 
