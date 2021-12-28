@@ -80,7 +80,7 @@ def game(name, get_params):
 
         if check == 0:
             print(f'"{answer}" is wrong answer ;(. Correct answer was "{true_answer}".')
-            print(f'Let as try again, {name}!')
+            print(f'Let\'s try again, {name}!')
 
             return
 
