@@ -31,7 +31,7 @@ def get_prime():
 
     is_prime = sympy.isprime(num)
     true_answer = 'yes' if is_prime is True else 'no'
-    qustion = f'{num}'
+    qustion = num
 
     return true_answer, qustion
 
