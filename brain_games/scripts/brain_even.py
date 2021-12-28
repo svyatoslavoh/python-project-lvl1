@@ -13,6 +13,7 @@ def main():
 
     """
     name = ask_name()
+    print('Answer "yes" if the number is even, otherwise answer "no".')
     game(name, get_even)
 
 
